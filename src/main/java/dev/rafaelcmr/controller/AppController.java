@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class AppController {
 
-    @GetMapping
+    @GetMapping("ping")
     public ResponseEntity<String> ping() {
         return new ResponseEntity<>("ping",  HttpStatus.OK);
     }
