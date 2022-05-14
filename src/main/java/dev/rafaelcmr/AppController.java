@@ -10,7 +10,12 @@ public class AppController {
 
     @GetMapping("/ping")
     public ResponseEntity<JsonEntity> ping() {
-        JsonEntity entity = new JsonEntity(1, "Ola Json");
+        JsonEntity entity = new JsonEntity(1, "Ping");
         return new ResponseEntity<>(entity,  HttpStatus.OK);
+    }
+
+    @GetMapping("/pong")
+    public ResponseEntity<JsonEntity> pong() {
+        return new ResponseEntity<>(new JsonEntity(2, "Pong"), HttpStatus.OK);
     }
 }
